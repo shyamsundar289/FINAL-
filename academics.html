@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Academics | Decent Global School Bikaner</title>
+    <meta
+      name="description"
+      content="Explore the academic excellence at Decent Global School Bikaner. From Pre-Primary to Middle School, we provide holistic education."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Frameworks -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1F2F5A",
+              secondary: "#F47C20",
+              accent: "#AFCBE3",
+              darkBg: "#0F172A",
+              darkSurface: "#1E293B",
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              heading: ["Playfair Display", "serif"],
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "slow-spin": "spin 12s linear infinite",
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/css">
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f1f1; }
+      .dark ::-webkit-scrollbar-track { background: #0f172a; }
+      ::-webkit-scrollbar-thumb { background: #1f2f5a; border-radius: 10px; }
+      .dark ::-webkit-scrollbar-thumb { background: #f47c20; }
+
+      /* Hero Mesh Gradient matching main site */
+      .hero-mesh {
+        background-color: #1f2f5a;
+        background-image:
+          radial-gradient(at 0% 0%, hsla(22, 90%, 54%, 0.15) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, hsla(208, 45%, 79%, 0.15) 0px, transparent 50%);
+      }
+      .dark .hero-mesh {
+        background-color: #0f172a;
+        background-image:
+          radial-gradient(at 0% 0%, hsla(22, 90%, 54%, 0.1) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, hsla(208, 45%, 79%, 0.05) 0px, transparent 50%);
+      }
+
+      .nav-active {
+        color: #f47c20 !important;
+        font-weight: 800;
+      }
+      
+      .academic-card {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .academic-card:hover {
+        transform: translateY(-10px);
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-darkBg text-primary dark:text-white transition-colors duration-300 font-sans">
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 h-20 flex items-center bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-transparent dark:border-white/5">
+      <nav class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-secondary/20">D</div>
+          <div class="block">
+            <h1 class="font-heading text-lg font-bold leading-none dark:text-white">DECENT GLOBAL SCHOOL</h1>
+            <p class="text-[13px] tracking-[0.375em] text-secondary font-semibold uppercase">Bikaner • Rajasthan</p>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="hidden lg:flex gap-8 items-center text-xs font-bold tracking-widest uppercase">
+          <li><a href="index.html" class="nav-link hover:text-secondary transition-colors">Home</a></li>
+          <li><a href="about.html" class="nav-link hover:text-secondary transition-colors">About</a></li>
+          <li><a href="academics.html" class="nav-link nav-active hover:text-secondary transition-colors">Academics</a></li>
+          <li><a href="gallery.html" class="nav-link hover:text-secondary transition-colors">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link hover:text-secondary transition-colors">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
+            <svg id="sun" class="w-5 h-5 text-yellow-500 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+            <svg id="moon" class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          </button>
+          <a href="enrollnow.html" class="hidden md:block bg-secondary hover:bg-secondary/90 text-white px-6 py-2.5 rounded-full text-xs font-extrabold shadow-lg shadow-secondary/20 transition-all">ENROLL NOW</a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-primary dark:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-primary/95 backdrop-blur-xl translate-x-full transition-transform duration-500 lg:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu" class="absolute top-8 right-8 text-white p-2"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        <a href="index.html" class="text-2xl font-heading text-white font-bold hover:text-secondary transition-colors">Home</a>
+        <a href="about.html" class="text-2xl font-heading text-white font-bold hover:text-secondary transition-colors">About</a>
+        <a href="academics.html" class="text-2xl font-heading text-secondary font-bold">Academics</a>
+        <a href="gallery.html" class="text-2xl font-heading text-white font-bold hover:text-secondary transition-colors">Gallery</a>
+        <a href="contact.html" class="text-2xl font-heading text-white font-bold hover:text-secondary transition-colors">Contact</a>
+        <a href="enrollnow.html" class="bg-secondary text-white px-8 py-3 rounded-full font-bold">Enroll Now</a>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative h-[450px] flex items-center justify-center overflow-hidden hero-mesh">
+      <div class="absolute inset-0 z-0">
+        <img src="" alt="Academics Background" class="w-full h-full object-cover opacity-20 grayscale">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-darkBg"></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+        <span class="inline-block bg-secondary/20 text-secondary border border-secondary/30 px-4 py-1 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase mb-6">Learning for Life</span>
+        <h1 class="text-5xl md:text-7xl font-heading font-extrabold text-white leading-tight mb-4">Academic <span class="text-secondary italic">Excellence</span></h1>
+        <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">A comprehensive and integrated curriculum designed to empower the next generation of leaders.</p>
+      </div>
+    </section>
+
+    <!-- 2. PRE-PRIMARY SECTION -->
+    <section class="py-24 bg-white dark:bg-darkBg transition-colors overflow-hidden">
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
+          <div class="lg:w-1/2" data-aos="fade-left">
+            <div class="relative">
+              <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-secondary rounded-3xl z-0"></div>
+              <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=2070&auto=format&fit=crop" alt="Pre-Primary Kids" class="relative z-10 rounded-3xl shadow-2xl border-4 border-white dark:border-white/10 aspect-[4/3] object-cover">
+            </div>
+          </div>
+          <div class="lg:w-1/2" data-aos="fade-right">
+            <span class="text-secondary font-extrabold text-[10px] tracking-[0.3em] uppercase">Foundation Stage</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-primary dark:text-white mt-4 mb-8">Pre-Primary <span class="text-secondary">Education</span></h2>
+            <p class="text-gray-600 dark:text-white/70 text-lg leading-relaxed mb-8">
+                Our Pre-Primary program (Play Group to UKG) focuses on creating a <span class="text-secondary font-bold">joyful learning environment</span>. Through play-based activities, storytelling, and creative learning, we help children develop <span class="border-b-2 border-secondary/30">curiosity, confidence, and basic learning skills</span>.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 bg-gray-50 dark:bg-white/5 rounded-2xl border-l-4 border-secondary">
+                    <p class="font-bold text-primary dark:text-white">Play Group & Nursery</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Age 2.5 - 3.5 Years</p>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-white/5 rounded-2xl border-l-4 border-primary">
+                    <p class="font-bold text-primary dark:text-white">LKG & UKG</p>
+                    <p class="text-xs text-gray-500 uppercase tracking-widest mt-1">Age 3.5 - 5.5 Years</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PRIMARY WING SECTION -->
+    <section class="py-24 bg-gray-50 dark:bg-darkSurface transition-colors">
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="lg:w-1/2" data-aos="fade-right">
+            <div class="relative">
+              <div class="absolute -top-6 -left-6 w-full h-full border-2 border-primary rounded-3xl z-0"></div>
+              <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2070&auto=format&fit=crop" alt="Primary School Students" class="relative z-10 rounded-3xl shadow-2xl border-4 border-white dark:border-white/10 aspect-[4/3] object-cover">
+            </div>
+          </div>
+          <div class="lg:w-1/2" data-aos="fade-left">
+            <span class="text-secondary font-extrabold text-[10px] tracking-[0.3em] uppercase">Classes 1 - 5</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-primary dark:text-white mt-4 mb-8">Primary Wing <span class="text-secondary">Development</span></h2>
+            <div class="space-y-6 text-gray-600 dark:text-white/70 text-lg leading-relaxed">
+              <p>The Primary Wing focuses on <span class="text-secondary font-bold italic">building strong academic foundations</span> in language, mathematics, and environmental studies. We encourage students to develop <span class="border-b-2 border-secondary/30">reading, writing, and analytical skills</span> through interactive and activity-based learning.</p>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <li class="flex items-center gap-3"><span class="text-secondary text-xl">✓</span> Conceptual Mathematics</li>
+                <li class="flex items-center gap-3"><span class="text-secondary text-xl">✓</span> Language Proficiency</li>
+                <li class="flex items-center gap-3"><span class="text-secondary text-xl">✓</span> Creative Expression</li>
+                <li class="flex items-center gap-3"><span class="text-secondary text-xl">✓</span> Logical Reasoning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MIDDLE SCHOOL SECTION -->
+    <section class="py-24 bg-white dark:bg-darkBg transition-colors">
+        <div class="container mx-auto px-6 md:px-12 text-center mb-16">
+          <span class="text-secondary font-extrabold text-[10px] tracking-[0.3em] uppercase">Classes 6 - 8</span>
+          <h2 class="text-4xl md:text-5xl font-heading font-bold text-primary dark:text-white mt-4">Middle School <span class="text-secondary">Program</span></h2>
+        </div>
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                <div class="lg:col-span-7 bg-primary rounded-[2.5rem] p-10 md:p-16 text-white" data-aos="fade-right">
+                    <h3 class="text-3xl font-heading font-bold mb-6 text-secondary italic">Preparing for the Future</h3>
+                    <p class="text-white/80 text-lg leading-relaxed mb-8">
+                        The Middle School program prepares students for <span class="text-secondary font-bold">advanced academic learning</span>. Students develop a <span class="border-b-2 border-white/20">deeper understanding of subjects</span>, critical thinking skills, and self-confidence through structured lessons and practical activities.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div class="flex gap-4">
+                            <span class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0"><svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.829c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg></span>
+                            <div>
+                                <h4 class="font-bold">Science Labs</h4>
+                                <p class="text-xs text-white/60">Hands-on practicals and observations.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center shrink-0"><svg class="w-5 h-5 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></span>
+                            <div>
+                                <h4 class="font-bold">Digital Literacy</h4>
+                                <p class="text-xs text-white/60">Modern computer awareness & basic skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop" alt="Student studying" class="w-full h-full object-cover rounded-[2.5rem] shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SUBJECTS OFFERED -->
+    <section class="py-24 bg-gray-50 dark:bg-darkSurface transition-colors">
+        <div class="container mx-auto px-6 md:px-12 text-center mb-16">
+            <span class="text-secondary font-extrabold text-[10px] tracking-[0.3em] uppercase">Our Curriculum</span>
+            <h2 class="text-4xl md:text-5xl font-heading font-bold text-primary dark:text-white mt-3">Subjects Offered</h2>
+        </div>
+        <div class="container mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <!-- English -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">English</p>
+            </div>
+            <!-- Hindi -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="50">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h18M3 10h18M3 15h18M3 20h18"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">Hindi</p>
+            </div>
+            <!-- Mathematics -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="100">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">Mathematics</p>
+            </div>
+            <!-- EVS -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="150">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">EVS</p>
+            </div>
+            <!-- Science -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="200">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.829c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">Science</p>
+            </div>
+            <!-- Social Studies -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="250">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9h18"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">Social Studies</p>
+            </div>
+            <!-- General Knowledge -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="300">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">Gen. Knowledge</p>
+            </div>
+            <!-- Computer Basics -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="350">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">Computer Basics</p>
+            </div>
+            <!-- Art & Craft -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="400">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.828 2.828a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">Art & Craft</p>
+            </div>
+            <!-- Physical Education -->
+            <div class="academic-card p-8 bg-white dark:bg-darkBg rounded-2xl shadow-sm text-center border-b-2 border-transparent hover:border-secondary" data-aos="zoom-in" data-aos-delay="450">
+                <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl mx-auto mb-5">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <p class="font-bold text-primary dark:text-white">Phys. Education</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TEACHING METHODOLOGY -->
+    <section class="py-24 bg-white dark:bg-darkBg transition-colors">
+        <div class="container mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-secondary font-extrabold text-[10px] tracking-[0.3em] uppercase">The DGS Way</span>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-primary dark:text-white mt-4 mb-8">How We Teach</h2>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary dark:text-white">Interactive Learning</h4>
+                            <p class="text-gray-500 dark:text-white/50">Moving beyond textbooks to engage students in real-world discussions.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.829c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary dark:text-white">Practical Exposure</h4>
+                            <p class="text-gray-500 dark:text-white/50">Science experiments and site visits that bring concepts to life.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-xl shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-primary dark:text-white">Holistic Support</h4>
+                            <p class="text-gray-500 dark:text-white/50">Personalized attention to every student's unique learning pace.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" alt="Teacher explaining" class="rounded-[3rem] shadow-2xl aspect-square object-cover">
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-full flex items-center justify-center text-white text-center p-4 animate-slow-spin">
+                    <p class="text-[9px] font-bold tracking-widest uppercase">Decent • Global • School •</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a233a] pt-20 pb-10 text-white relative">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-16">
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <h2 class="font-heading text-2xl font-bold tracking-tight mb-2">DECENT GLOBAL SCHOOL</h2>
+              <p class="text-[12px] tracking-[0.4em] text-secondary font-bold uppercase">Bikaner • Rajasthan</p>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed max-w-md">Empowering students with world-class education and values. Join us in shaping a brighter future.</p>
+          </div>
+          <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-10">
+            <div class="space-y-6">
+              <h4 class="text-white font-bold text-sm uppercase tracking-widest border-l-2 border-secondary pl-3">Explore</h4>
+              <ul class="space-y-4 text-sm text-white/50">
+                <li><a href="index.html" class="hover:text-secondary">Home</a></li>
+                <li><a href="about.html" class="hover:text-secondary">About Us</a></li>
+                <li><a href="academics.html" class="text-secondary font-bold">Academics</a></li>
+                <li><a href="gallery.html" class="hover:text-secondary">Gallery</a></li>
+                <li><a href="contact.html" class="hover:text-secondary">Contact</a></li>
+              </ul>
+            </div>
+            <div class="space-y-6 md:col-span-2">
+              <h4 class="text-white font-bold text-sm uppercase tracking-widest border-l-2 border-secondary pl-3">Contact</h4>
+              <div class="space-y-4 text-sm text-white/50">
+                <p>Civil Lines, Bikaner, Rajasthan - 334001</p>
+                <p>info@decentglobalschool.com</p>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 text-center md:text-left">
+          <p class="text-[10px] md:text-xs text-white/30 tracking-[0.3em] uppercase font-medium">© 2026 DECENT GLOBAL SCHOOL BIKANER. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+
+      // Theme Management
+      const html = document.documentElement;
+      const themeBtn = document.getElementById("theme-toggle");
+      const sunIcon = document.getElementById("sun");
+      const moonIcon = document.getElementById("moon");
+
+      function updateTheme(theme) {
+        if (theme === "dark") {
+          html.classList.add("dark");
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        } else {
+          html.classList.remove("dark");
+          sunIcon.classList.add("hidden");
+          moonIcon.classList.remove("hidden");
+        }
+        localStorage.setItem("dgs-theme", theme);
+      }
+
+      const savedTheme = localStorage.getItem("dgs-theme") || "light";
+      updateTheme(savedTheme);
+
+      themeBtn.addEventListener("click", () => {
+        updateTheme(html.classList.contains("dark") ? "light" : "dark");
+      });
+
+      // Mobile Menu
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeMenu = document.getElementById('close-menu');
+
+      mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+      closeMenu.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+
+      // Navbar Scroll Effect
+      const nav = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          nav.classList.add("shadow-xl", "h-16");
+          nav.classList.remove("h-20");
+        } else {
+          nav.classList.remove("shadow-xl", "h-16");
+          nav.classList.add("h-20");
+        }
+      });
+    </script>
+  </body>
+</html>

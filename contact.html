@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Us | Decent Global School Bikaner</title>
+    <meta
+      name="description"
+      content="Get in touch with Decent Global School Bikaner for admissions, enquiries, and school information. We are here to help you."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1F2F5A",
+              secondary: "#F47C20",
+              accent: "#AFCBE3",
+              darkBg: "#0F172A",
+              darkSurface: "#1E293B",
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              heading: ["Playfair Display", "serif"],
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "slow-spin": "spin 12s linear infinite",
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/css">
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f1f1; }
+      .dark ::-webkit-scrollbar-track { background: #0f172a; }
+      ::-webkit-scrollbar-thumb { background: #1f2f5a; border-radius: 10px; }
+      .dark ::-webkit-scrollbar-thumb { background: #f47c20; }
+
+      /* Smooth Section Transitions */
+      section { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+      section.visible { opacity: 1; transform: translateY(0); }
+
+      /* Hero Mesh Gradient */
+      .hero-mesh {
+        background-color: #1f2f5a;
+        background-image:
+          radial-gradient(at 0% 0%, hsla(22, 90%, 54%, 0.15) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, hsla(208, 45%, 79%, 0.15) 0px, transparent 50%);
+      }
+      .dark .hero-mesh {
+        background-color: #0f172a;
+        background-image:
+          radial-gradient(at 0% 0%, hsla(22, 90%, 54%, 0.1) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, hsla(208, 45%, 79%, 0.05) 0px, transparent 50%);
+      }
+
+      .nav-active { color: #f47c20 !important; font-weight: 800; }
+      
+      .contact-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+      .contact-card:hover { transform: translateY(-5px); }
+
+      #mobile-menu { transition: transform 0.3s ease-in-out; }
+      #mobile-menu.hidden { display: none; }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-darkBg text-primary dark:text-white transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 h-20 flex items-center bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-transparent dark:border-white/5">
+      <nav class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-secondary/20">D</div>
+          <div class="block">
+            <h1 class="font-heading text-lg sm:text-lg font-bold leading-none dark:text-white">DECENT GLOBAL SCHOOL</h1>
+            <p class="text-[13px] tracking-[0.375em] text-secondary font-semibold uppercase">Bikaner • Rajasthan</p>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="hidden lg:flex gap-8 items-center text-xs font-bold tracking-widest uppercase">
+          <li><a href="index.html" class="nav-link hover:text-secondary transition-colors">Home</a></li>
+          <li><a href="about.html" class="nav-link hover:text-secondary transition-colors">About</a></li>
+          <li><a href="academics.html" class="nav-link hover:text-secondary transition-colors">Academics</a></li>
+          <li><a href="gallery.html" class="nav-link hover:text-secondary transition-colors">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link nav-active hover:text-secondary transition-colors">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
+            <svg id="sun" class="w-5 h-5 text-yellow-500 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+            <svg id="moon" class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          </button>
+          <a href="enrollnow.html" class="hidden md:block bg-secondary hover:bg-secondary/90 text-white px-6 py-2.5 rounded-full text-xs font-extrabold shadow-lg shadow-secondary/20 transition-all">ENROLL NOW</a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-primary dark:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white dark:bg-darkBg border-b border-gray-100 dark:border-white/5 py-6 px-6 lg:hidden shadow-2xl">
+        <ul class="flex flex-col gap-6 text-xs font-bold tracking-widest uppercase">
+          <li><a href="index.html" class="nav-link block hover:text-secondary">Home</a></li>
+          <li><a href="about.html" class="nav-link block hover:text-secondary">About</a></li>
+          <li><a href="academics.html" class="nav-link block hover:text-secondary">Academics</a></li>
+          <li><a href="gallery.html" class="nav-link block hover:text-secondary">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link block hover:text-secondary">Contact</a></li>
+          <li><a href="enrollnow.html" class="inline-block bg-secondary text-white px-6 py-3 rounded-full text-[10px] mt-2">ENROLL NOW</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="relative h-[450px] flex items-center justify-center overflow-hidden hero-mesh">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" alt="Contact Us Background" class="w-full h-full object-cover opacity-20 grayscale">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/70 to-darkBg"></div>
+      </div>
+      <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+        <span class="inline-block bg-secondary/20 text-secondary border border-secondary/30 px-4 py-1 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase mb-6">Contact Us</span>
+        <h1 class="text-5xl md:text-7xl font-heading font-extrabold text-white leading-tight mb-4">Let's <span class="text-secondary italic">Connect</span></h1>
+        <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">We are here to help you with admissions, academic enquiries, and general information about our campus.</p>
+      </div>
+    </section>
+
+    <!-- 2. Contact Information Cards -->
+    <section class="py-20 bg-white dark:bg-darkBg transition-colors">
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Address -->
+          <div class="contact-card p-8 bg-gray-50 dark:bg-white/5 rounded-3xl border border-transparent hover:border-secondary transition-all" data-aos="fade-up">
+            <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <h4 class="text-lg font-bold text-primary dark:text-white mb-2">Our Address</h4>
+            <p class="text-gray-500 dark:text-white/60 text-sm leading-relaxed">Civil Lines Area, Near Public Park, Bikaner, Rajasthan</p>
+          </div>
+
+          <!-- Phone -->
+          <div class="contact-card p-8 bg-gray-50 dark:bg-white/5 rounded-3xl border border-transparent hover:border-secondary transition-all" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            </div>
+            <h4 class="text-lg font-bold text-primary dark:text-white mb-2">Call Us</h4>
+            <p class="text-gray-500 dark:text-white/60 text-sm leading-relaxed">+91 98765 43210<br>+91 91234 56789</p>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-card p-8 bg-gray-50 dark:bg-white/5 rounded-3xl border border-transparent hover:border-secondary transition-all" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <h4 class="text-lg font-bold text-primary dark:text-white mb-2">Email Address</h4>
+            <p class="text-gray-500 dark:text-white/60 text-sm leading-relaxed">info@decentglobalschool.com<br>admissions@dgs.com</p>
+          </div>
+
+          <!-- Timing -->
+          <div class="contact-card p-8 bg-gray-50 dark:bg-white/5 rounded-3xl border border-transparent hover:border-secondary transition-all" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h4 class="text-lg font-bold text-primary dark:text-white mb-2">School Timing</h4>
+            <p class="text-gray-500 dark:text-white/60 text-sm leading-relaxed">Mon - Sat: 8:00 AM - 2:00 PM<br>Sunday: Closed</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Form and Map Redesign -->
+    <section class="py-24 bg-gray-50 dark:bg-darkSurface transition-colors">
+      <div class="container mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-start">
+        
+        <!-- Left Column: Inquiry & Map -->
+        <div class="space-y-8" data-aos="fade-right">
+          <div>
+            <span class="text-secondary font-extrabold text-[10px] tracking-[0.3em] uppercase">Quick Enquiry</span>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary dark:text-white mt-4 mb-6">Find Our <span class="text-secondary">School</span></h2>
+            <p class="text-gray-600 dark:text-white/60 text-lg leading-relaxed mb-8">Visit our campus in Bikaner to explore our learning environment and world-class facilities first-hand.</p>
+          </div>
+          
+          <!-- Optimized Map Height -->
+          <div class="w-full h-80 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white dark:border-white/10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56447.3820935574!2d73.267675!3d28.022935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393fdd3876e4693b%3A0xc3b5d254f15a3c94!2sBikaner%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1709230000000!5m2!1sen!2sin"
+              class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-2xl font-bold shadow-lg hover:scale-105 transition-all">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp Us
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Form (Styled as per Index Page) -->
+        <div class="bg-white dark:bg-darkBg p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100 dark:border-white/5" data-aos="fade-left">
+          <h3 class="text-2xl font-heading font-bold text-primary dark:text-white mb-2">Send Us a Message</h3>
+          <p class="text-gray-500 dark:text-white/50 text-sm mb-8">Fill out the form below and our team will get back to you shortly.</p>
+          
+          <form action="#" method="POST" class="space-y-5">
+            <div class="grid md:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Name</label>
+                <input type="text" name="name" required class="w-full bg-gray-50 dark:bg-white/5 border-none rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-secondary text-black dark:text-white transition-all" placeholder="Enter Full Name">
+              </div>
+              <div>
+                <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Phone Number</label>
+                <input type="tel" name="phone" required class="w-full bg-gray-50 dark:bg-white/5 border-none rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-secondary text-black dark:text-white transition-all" placeholder="+91 00000 00000">
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Email Address</label>
+              <input type="email" name="email" required class="w-full bg-gray-50 dark:bg-white/5 border-none rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-secondary text-black dark:text-white transition-all" placeholder="example@email.com">
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-secondary uppercase tracking-widest mb-2">Message</label>
+              <textarea name="message" required rows="4" class="w-full bg-gray-50 dark:bg-white/5 border-none rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-secondary text-black dark:text-white transition-all" placeholder="Tell us about your enquiry..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-xl shadow-primary/20 hover:-translate-y-1 hover:bg-primary/90 transition-all flex items-center justify-center gap-3">
+              Send Message
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Admission CTA Section -->
+    <section id="admission-form" class="py-24 bg-secondary transition-colors relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div class="container mx-auto px-6 md:px-12 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-heading font-extrabold text-white mb-6">Ready to Join <span class="italic opacity-80 underline">DGS</span>?</h2>
+            <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">Start your child's learning journey with Bikaner's leading academic institution. Admissions for Session 2026-27 are now open.</p>
+            <div class="flex justify-center">
+                <a href="index.html#contact" class="bg-primary text-white px-12 py-5 rounded-2xl font-extrabold text-lg shadow-2xl hover:-translate-y-2 transition-all">Enroll Your Child Now</a>
+            </div>
+        </div>
+    </section>
+
+     <footer class="bg-[#1a233a] pt-20 pb-10 text-white relative">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-16">
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <h2 class="font-heading text-2xl font-bold tracking-tight mb-2">DECENT GLOBAL SCHOOL</h2>
+              <p class="text-[12px] tracking-[0.4em] text-secondary font-bold uppercase">Bikaner • Rajasthan</p>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed max-w-md">Empowering students with world-class education and values. Join us in shaping a brighter future.</p>
+          </div>
+          <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-10">
+            <div class="space-y-6">
+              <h4 class="text-white font-bold text-sm uppercase tracking-widest border-l-2 border-secondary pl-3">Explore</h4>
+              <ul class="space-y-4 text-sm text-white/50">
+                <li><a href="index.html" class="hover:text-secondary">Home</a></li>
+                <li><a href="about.html" class="hover:text-secondary">About Us</a></li>
+                <li><a href="academics.html" class="hover:text-secondary">Academics</a></li>
+                <li><a href="gallery.html" class="hover:text-secondary">Gallery</a></li>
+                <li><a href="contact.html" class="text-secondary font-bold">Contact</a></li>
+              </ul>
+            </div>
+            <div class="space-y-6 md:col-span-2">
+              <h4 class="text-white font-bold text-sm uppercase tracking-widest border-l-2 border-secondary pl-3">Contact</h4>
+              <div class="space-y-4 text-sm text-white/50">
+                <p>Civil Lines, Bikaner, Rajasthan - 334001</p>
+                <p>info@decentglobalschool.com</p>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 text-center md:text-left">
+          <p class="text-[10px] md:text-xs text-white/30 tracking-[0.3em] uppercase font-medium">© 2026 DECENT GLOBAL SCHOOL BIKANER. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+
+      // Theme Management
+      const html = document.documentElement;
+      const themeBtn = document.getElementById("theme-toggle");
+      const sunIcon = document.getElementById("sun");
+      const moonIcon = document.getElementById("moon");
+
+      function updateTheme(theme) {
+        if (theme === "dark") {
+          html.classList.add("dark");
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        } else {
+          html.classList.remove("dark");
+          sunIcon.classList.add("hidden");
+          moonIcon.classList.remove("hidden");
+        }
+        localStorage.setItem("dgs-theme", theme);
+      }
+
+      const savedTheme = localStorage.getItem("dgs-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      updateTheme(savedTheme);
+
+      themeBtn.addEventListener("click", () => {
+        updateTheme(html.classList.contains("dark") ? "light" : "dark");
+      });
+
+      // Intersection Observer for Section Visibility
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        }, { threshold: 0.1 });
+      document.querySelectorAll("section").forEach((section) => observer.observe(section));
+
+      // Navbar Scroll Effect
+      const nav = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          nav.classList.add("shadow-xl", "h-16");
+          nav.classList.remove("h-20");
+        } else {
+          nav.classList.remove("shadow-xl", "h-16");
+          nav.classList.add("h-20");
+        }
+      });
+
+      // Prevent Reload on Current Page
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        const href = link.getAttribute("href");
+        const currentPath = window.location.pathname.split("/").pop() || "index.html";
+        if (href === currentPath) link.classList.add("nav-active");
+        link.addEventListener("click", (e) => {
+          if (href === currentPath) {
+            e.preventDefault();
+            document.getElementById("mobile-menu").classList.add("hidden");
+          }
+        });
+      });
+
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+    </script>
+  </body>
+</html>

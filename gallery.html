@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gallery | Decent Global School Bikaner</title>
+    <meta
+      name="description"
+      content="Explore the vibrant life at Decent Global School Bikaner. View our campus, activities, sports, and cultural events."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Frameworks & Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1F2F5A",
+              secondary: "#F47C20",
+              accent: "#AFCBE3",
+              darkBg: "#0F172A",
+              darkSurface: "#1E293B",
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+              heading: ["Playfair Display", "serif"],
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "slow-spin": "spin 12s linear infinite",
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              fadeInUp: {
+                "0%": { opacity: "0", transform: "translateY(30px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/css">
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1f2f5a;
+        border-radius: 10px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #f47c20;
+      }
+
+      /* Hero Mesh Gradient matching main site */
+      .hero-mesh {
+        background-color: #1f2f5a;
+        background-image:
+          radial-gradient(
+            at 0% 0%,
+            hsla(22, 90%, 54%, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 0%,
+            hsla(208, 45%, 79%, 0.15) 0px,
+            transparent 50%
+          );
+      }
+      .dark .hero-mesh {
+        background-color: #0f172a;
+        background-image:
+          radial-gradient(
+            at 0% 0%,
+            hsla(22, 90%, 54%, 0.1) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 100%,
+            hsla(208, 45%, 79%, 0.05) 0px,
+            transparent 50%
+          );
+      }
+
+      /* Filter Bar Mobile Scroll Hide */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Gallery Specific Transitions */
+      .gallery-item {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .gallery-item.hidden {
+        display: none;
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      /* Image Overlay Gradient */
+      .img-overlay {
+        background: linear-gradient(to top, rgba(31, 47, 90, 0.9) 0%, rgba(31, 47, 90, 0.4) 50%, transparent 100%);
+      }
+
+      /* GLightbox Custom Styling */
+      .glightbox-container .gslide-description {
+        background: #1f2f5a !important;
+      }
+      .glightbox-container .gslide-title {
+        font-family: 'Playfair Display', serif !important;
+        color: #f47c20 !important;
+      }
+      
+      .nav-active {
+        color: #f47c20 !important;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-darkBg text-primary dark:text-white transition-colors duration-300 font-sans">
+
+    <!-- Header / Navbar -->
+    <header
+      id="navbar"
+      class="fixed top-0 w-full z-50 transition-all duration-300 h-20 flex items-center bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-transparent dark:border-white/5"
+    >
+      <nav class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-secondary/20">
+            D
+          </div>
+          <div class="block">
+            <h1 class="font-heading text-lg font-bold leading-none dark:text-white">
+              DECENT GLOBAL SCHOOL
+            </h1>
+            <p class="text-[13px] tracking-[0.375em] text-secondary font-semibold uppercase">
+              Bikaner • Rajasthan
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="hidden lg:flex gap-8 items-center text-xs font-bold tracking-widest uppercase">
+          <li><a href="index.html" class="nav-link hover:text-secondary transition-colors">Home</a></li>
+          <li><a href="index.html" class="nav-link hover:text-secondary transition-colors">About</a></li>
+          <li><a href="index.html" class="nav-link hover:text-secondary transition-colors">Academics</a></li>
+          <li><a href="gallery.html" class="nav-link nav-active hover:text-secondary transition-colors">Gallery</a></li>
+          <li><a href="enrollnow.html" class="nav-link hover:text-secondary transition-colors">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
+            <svg id="sun" class="w-5 h-5 text-yellow-500 hidden" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+            </svg>
+            <svg id="moon" class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+          </button>
+          <a href="index.html#contact" class="hidden md:block bg-secondary hover:bg-secondary/90 text-white px-6 py-2.5 rounded-full text-xs font-extrabold shadow-lg shadow-secondary/20 transition-all">ENROLL NOW</a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-primary dark:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-primary/95 backdrop-blur-xl translate-x-full transition-transform duration-500 lg:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="close-menu" class="absolute top-8 right-8 text-white p-2">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <a href="index.html" class="text-2xl font-heading text-white font-bold hover:text-secondary transition-colors">Home</a>
+        <a href="index.html" class="text-2xl font-heading text-white font-bold hover:text-secondary transition-colors">About</a>
+        <a href="index.html" class="text-2xl font-heading text-white font-bold hover:text-secondary transition-colors">Academics</a>
+        <a href="gallery.html" class="text-2xl font-heading text-secondary font-bold">Gallery</a>
+        <a href="index.html" class="text-2xl font-heading text-white font-bold hover:text-secondary transition-colors">Contact</a>
+        <a href="enrollnow.html" class="bg-secondary text-white px-8 py-3 rounded-full font-bold">Enroll Now</a>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative h-[400px] flex items-center justify-center overflow-hidden hero-mesh">
+      <div class="absolute inset-0 z-0">
+        <img src="" 
+             alt="School Gallery Background" 
+             class="w-full h-full object-cover opacity-30 grayscale transition-transform duration-[10s] hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-darkBg"></div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+        <span class="inline-block bg-secondary/20 text-secondary border border-secondary/30 px-4 py-1 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase mb-4">
+            Visual Storytelling
+        </span>
+        <h1 class="text-5xl md:text-7xl font-heading font-extrabold text-white leading-tight mb-4">
+          Our <span class="text-secondary italic">Gallery</span>
+        </h1>
+        <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
+          Capturing the vibrant moments, academic achievements, and the joyous journey of our students.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. STICKY CATEGORY FILTER BAR -->
+    <!-- Fixed: Dynamic Top value handled via JavaScript to match Navbar height -->
+    <section id="filter-bar" class="sticky top-[80px] left-0 w-full z-40 bg-white dark:bg-darkBg border-b border-gray-100 dark:border-white/10 transition-all duration-300">
+      <div class="container mx-auto px-6 md:px-12">
+          <div class="flex items-center justify-center py-6">
+              <div class="flex items-center gap-3 overflow-x-auto no-scrollbar scroll-smooth">
+                  
+                  <button data-filter="all" class="filter-btn active whitespace-nowrap px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 bg-secondary text-white shadow-lg shadow-secondary/20 focus:outline-none">
+                      All
+                  </button>
+
+                  <button data-filter="campus" class="filter-btn whitespace-nowrap px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 bg-gray-50 dark:bg-white/5 text-primary dark:text-white/70 hover:bg-secondary/10 hover:text-secondary focus:outline-none">
+                      Campus
+                  </button>
+
+                  <button data-filter="activities" class="filter-btn whitespace-nowrap px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 bg-gray-50 dark:bg-white/5 text-primary dark:text-white/70 hover:bg-secondary/10 hover:text-secondary focus:outline-none">
+                      Activities
+                  </button>
+
+                  <button data-filter="sports" class="filter-btn whitespace-nowrap px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 bg-gray-50 dark:bg-white/5 text-primary dark:text-white/70 hover:bg-secondary/10 hover:text-secondary focus:outline-none">
+                      Sports
+                  </button>
+
+                  <button data-filter="events" class="filter-btn whitespace-nowrap px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 bg-gray-50 dark:bg-white/5 text-primary dark:text-white/70 hover:bg-secondary/10 hover:text-secondary focus:outline-none">
+                      Events
+                  </button>
+
+                  <button data-filter="festivals" class="filter-btn whitespace-nowrap px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 bg-gray-50 dark:bg-white/5 text-primary dark:text-white/70 hover:bg-secondary/10 hover:text-secondary focus:outline-none">
+                      Festivals
+                  </button>
+
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- 3. GALLERY GRID -->
+    <!-- Fixed: Reduced top padding to pt-8 to sit closer to the filter bar -->
+    <section class="pb-24 pt-8 bg-white dark:bg-darkBg transition-colors">
+      <div class="container mx-auto px-6 md:px-12">
+        <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Campus -->
+          <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-lg" data-category="campus" data-aos="fade-up">
+            <a href="https://picsum.photos/id/1018/1200/800" class="glightbox" data-gallery="school-gallery" data-title="Modern Campus Infrastructure">
+              <img src="https://picsum.photos/id/1018/600/400" alt="Campus Building" class="w-full h-72 object-cover transform transition-transform duration-700 group-hover:scale-110" loading="lazy">
+              <div class="absolute inset-0 img-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <span class="text-secondary text-[10px] font-bold tracking-widest uppercase mb-1">Campus</span>
+                <h4 class="text-white text-xl font-heading font-bold">Main Academic Wing</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Science Lab -->
+          <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-lg" data-category="campus" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://picsum.photos/id/1019/1200/800" class="glightbox" data-gallery="school-gallery" data-title="Well-equipped Science Lab">
+              <img src="https://picsum.photos/id/1019/600/400" alt="Science Lab" class="w-full h-72 object-cover transform transition-transform duration-700 group-hover:scale-110" loading="lazy">
+              <div class="absolute inset-0 img-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <span class="text-secondary text-[10px] font-bold tracking-widest uppercase mb-1">Campus</span>
+                <h4 class="text-white text-xl font-heading font-bold">Advanced Science Labs</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Activities -->
+          <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-lg" data-category="activities" data-aos="fade-up">
+            <a href="https://picsum.photos/id/1025/1200/800" class="glightbox" data-gallery="school-gallery" data-title="Art & Craft Session">
+              <img src="https://picsum.photos/id/1025/600/400" alt="Art Workshop" class="w-full h-72 object-cover transform transition-transform duration-700 group-hover:scale-110" loading="lazy">
+              <div class="absolute inset-0 img-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <span class="text-secondary text-[10px] font-bold tracking-widest uppercase mb-1">Activities</span>
+                <h4 class="text-white text-xl font-heading font-bold">Creative Arts Studio</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Sports -->
+          <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-lg" data-category="sports" data-aos="fade-up">
+            <a href="https://picsum.photos/id/1031/1200/800" class="glightbox" data-gallery="school-gallery" data-title="Annual Sports Meet">
+              <img src="https://picsum.photos/id/1031/600/400" alt="Sports Day" class="w-full h-72 object-cover transform transition-transform duration-700 group-hover:scale-110" loading="lazy">
+              <div class="absolute inset-0 img-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <span class="text-secondary text-[10px] font-bold tracking-widest uppercase mb-1">Sports</span>
+                <h4 class="text-white text-xl font-heading font-bold">Champions on the Field</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Events -->
+          <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-lg" data-category="events" data-aos="fade-up">
+            <a href="https://picsum.photos/id/1035/1200/800" class="glightbox" data-gallery="school-gallery" data-title="Annual Day Performance">
+              <img src="https://picsum.photos/id/1035/600/400" alt="Annual Day" class="w-full h-72 object-cover transform transition-transform duration-700 group-hover:scale-110" loading="lazy">
+              <div class="absolute inset-0 img-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <span class="text-secondary text-[10px] font-bold tracking-widest uppercase mb-1">Events</span>
+                <h4 class="text-white text-xl font-heading font-bold">Cultural Extravaganza</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Festivals -->
+          <div class="gallery-item group relative rounded-2xl overflow-hidden shadow-lg" data-category="festivals" data-aos="fade-up">
+            <a href="https://picsum.photos/id/1039/1200/800" class="glightbox" data-gallery="school-gallery" data-title="Diwali Celebration">
+              <img src="https://picsum.photos/id/1039/600/400" alt="Diwali" class="w-full h-72 object-cover transform transition-transform duration-700 group-hover:scale-110" loading="lazy">
+              <div class="absolute inset-0 img-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <span class="text-secondary text-[10px] font-bold tracking-widest uppercase mb-1">Festivals</span>
+                <h4 class="text-white text-xl font-heading font-bold">Festive Traditions</h4>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="hidden text-center py-20">
+            <div class="w-20 h-20 bg-gray-100 dark:bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-heading font-bold text-primary dark:text-white mb-2">No Images Found</h3>
+            <p class="text-gray-500">We couldn't find any images in this category yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="bg-[#1a233a] pt-20 pb-10 text-white relative">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-16">
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <h2 class="font-heading text-2xl font-bold tracking-tight mb-2">DECENT GLOBAL SCHOOL</h2>
+              <p class="text-[12px] tracking-[0.4em] text-secondary font-bold uppercase">Bikaner • Rajasthan</p>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed max-w-md">Empowering students with world-class education and values. Join us in shaping a brighter future.</p>
+          </div>
+          <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-10">
+            <div class="space-y-6">
+              <h4 class="text-white font-bold text-sm uppercase tracking-widest border-l-2 border-secondary pl-3">Explore</h4>
+              <ul class="space-y-4 text-sm text-white/50">
+                <li><a href="index.html" class="hover:text-secondary">Home</a></li>
+                <li><a href="about.html" class="hover:text-secondary">About Us</a></li>
+                <li><a href="academics.html" class="hover:text-secondary">Academics</a></li>
+                <li><a href="gallery.html" class="text-secondary font-bold">Gallery</a></li>
+                <li><a href="contact.html" class="hover:text-secondary">Contact</a></li>
+              </ul>
+            </div>
+            <div class="space-y-6 md:col-span-2">
+              <h4 class="text-white font-bold text-sm uppercase tracking-widest border-l-2 border-secondary pl-3">Contact</h4>
+              <div class="space-y-4 text-sm text-white/50">
+                <p>Civil Lines, Bikaner, Rajasthan - 334001</p>
+                <p>info@decentglobalschool.com</p>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 text-center md:text-left">
+          <p class="text-[10px] md:text-xs text-white/30 tracking-[0.3em] uppercase font-medium">© 2026 DECENT GLOBAL SCHOOL BIKANER. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({ duration: 800, once: true });
+
+      // Initialize GLightbox
+      const lightbox = GLightbox({ touchNavigation: true, loop: true });
+
+      // Filter Logic
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      const noResults = document.getElementById('no-results');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+              b.classList.remove('active', 'bg-secondary', 'text-white', 'shadow-lg', 'shadow-secondary/20');
+              b.classList.add('bg-gray-50', 'dark:bg-white/5', 'text-primary', 'dark:text-white/70');
+          });
+          
+          btn.classList.add('active', 'bg-secondary', 'text-white', 'shadow-lg', 'shadow-secondary/20');
+          btn.classList.remove('bg-gray-50', 'dark:bg-white/5', 'text-primary', 'dark:text-white/70');
+
+          const filterValue = btn.getAttribute('data-filter');
+          let visibleCount = 0;
+
+          galleryItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+            if (filterValue === 'all' || category === filterValue) {
+              item.style.display = 'block';
+              visibleCount++;
+            } else {
+              item.style.display = 'none';
+            }
+          });
+
+          noResults.classList.toggle('hidden', visibleCount > 0);
+          AOS.refresh();
+        });
+      });
+
+      // Theme Management
+      const html = document.documentElement;
+      const themeBtn = document.getElementById("theme-toggle");
+      const sunIcon = document.getElementById("sun");
+      const moonIcon = document.getElementById("moon");
+
+      function updateTheme(theme) {
+        if (theme === "dark") {
+          html.classList.add("dark");
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        } else {
+          html.classList.remove("dark");
+          sunIcon.classList.add("hidden");
+          moonIcon.classList.remove("hidden");
+        }
+        localStorage.setItem("dgs-theme", theme);
+      }
+
+      const savedTheme = localStorage.getItem("dgs-theme") || "light";
+      updateTheme(savedTheme);
+
+      themeBtn.addEventListener("click", () => {
+        updateTheme(html.classList.contains("dark") ? "light" : "dark");
+      });
+
+      // Mobile Menu
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeMenu = document.getElementById('close-menu');
+
+      mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+      closeMenu.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+
+      // Navbar Scroll & Dynamic Sticky Top adjustment
+      const nav = document.getElementById("navbar");
+      const filterBar = document.getElementById("filter-bar");
+      
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          nav.classList.add("shadow-xl", "h-16");
+          nav.classList.remove("h-20");
+          // Adjust sticky top to match reduced navbar height (64px)
+          if(filterBar) filterBar.style.top = "64px";
+        } else {
+          nav.classList.remove("shadow-xl", "h-16");
+          nav.classList.add("h-20");
+          // Reset sticky top to match full navbar height (80px)
+          if(filterBar) filterBar.style.top = "80px";
+        }
+      });
+    </script>
+  </body>
+</html>
